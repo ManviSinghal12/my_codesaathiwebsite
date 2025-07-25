@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>www.codesaathi.com</title>
+    <link
+      rel="shortcut icon"
+      href="https://media.licdn.com/dms/image/v2/D5603AQF0UagljKUaJw/profile-displayphoto-scale_200_200/B56ZgLA2PgHMAY-/0/1752531430092?e=2147483647&v=beta&t=2fSKpB_jOWLekcU17FWasDvyydz_qzAkAMPdXRpPzG4"
+      type="image/x-icon"
+    />
+    <style>
+      * {
+        background: linear-gradient(to right, #642b73, #c6426e);
+        box-sizing: border-box;
+      }
+      .homepage h1 {
+        font-size: 55px;
+        color: #fff;
+        padding: 0%;
+        margin-bottom: 10px;
+      }
+      .homepage p {
+        font-size: 20px;
+        color: #f0f0f0;
+        margin: 0px;
+        margin-bottom: 30px;
+      }
+      .homepage {
+        color: white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        background-color: linear-gradient(to right, #642b73, #c6426e);
+      }
+      .homepage button {
+        background: #fff;
+        color: #020024;
+        border: 3px solid #020024;
+        border-radius: 27px;
+        /* margin: 15px; */
+        padding: 12px 25px;
+        font-size: 1rem;
+        box-shadow: 10px 3px 1px black;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .homepage button:hover {
+        background-color: #78a1c3;
+        color: #fff;
+      }
+      @media (max-width: 700px) {
+        .homepage h1 {
+          font-size: 2rem;
+        }
+        .homepage p {
+          font-size: 1rem;
+        }
+      }
+      .homepage img {
+        border: 5px solid black;
+        border-radius: 200px;
+        margin-bottom: 20px;
+        display: block;
+        opacity: 0;
+        animation: fadeIn 0.5s ease forwards;
+      }
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+      /* Navbar styles */
+      .navbar {
+        background-color: #137fcdb8;
+        padding: 2px 2px;
+        color: white;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        border-radius: 22px;
+      }
+
+      .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .logo a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 25px;
+      }
+
+      .nav-links li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: color 0.3s ease;
+      }
+
+      .nav-links li a:hover {
+        color: #f0e68c;
+      }
+
+      /* Hamburger Menu */
+      .menu-toggle {
+        display: none;
+        font-size: 1.8rem;
+        cursor: pointer;
+      }
+      /* Responsive Nav */
+      @media (max-width: 700px) {
+        .nav-links {
+          flex-direction: column;
+          position: absolute;
+          top: 65px;
+          right: 20px;
+          background-color: #afc9da;
+          padding: 15px;
+          border-radius: 4px;
+          display: none;
+        }
+
+        .nav-links.active {
+          display: flex;
+        }
+
+        .menu-toggle {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="nav-container">
+        <h1 class="logo"><a href="CODE_SAATHI_COMPI.html">Code Saathi</a></h1>
+        <nav>
+          <ul class="nav-links" id="navLinks">
+            <li><a href="CODE_SAATHI_COMPI.html">Home</a></li>
+            <li><a href="CODESAATHI_MENTORS.html">Mentors</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      </div>
+    </header>
+    <section class="homepage">
+      <img
+        src="https://media.licdn.com/dms/image/v2/D5603AQF0UagljKUaJw/profile-displayphoto-scale_200_200/B56ZgLA2PgHMAY-/0/1752531430092?e=2147483647&v=beta&t=2fSKpB_jOWLekcU17FWasDvyydz_qzAkAMPdXRpPzG4"
+        alt="codeimage"
+        width="250px"
+      />
+      <h1>Find Your Coding Mentor</h1>
+      <p>Connect , Learn and Grow with Code Saathi</p>
+      <button onclick="window.location.href='CODESAATHI_MENTORS.html' ">
+        Get Started
+      </button>
+    </section>
+    <script>
+      function toggleMenu() {
+        document.getElementById("navLinks").classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
